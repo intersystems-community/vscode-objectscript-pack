@@ -15,7 +15,7 @@
     "categories": [
         "Extension Packs"
     ],
-    "extensionDependencies": [ 
+    "extensionPack": [ 
         "intersystems-community.vscode-objectscript",
         "intersystems-community.servermanager",
         "intersystems.language-server"
