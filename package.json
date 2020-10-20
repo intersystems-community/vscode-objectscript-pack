@@ -4,6 +4,7 @@
     "description": "Extensions for ObjectScript development",
     "version": "1.0.0",
     "publisher": "intersystems-community",
+    "icon": "logo.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/intersystems-community/vscode-objectscript-pack"
