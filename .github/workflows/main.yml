@@ -33,7 +33,7 @@ jobs:
           NAME=$(jq -r '.name' package.json)-$VERSION
           echo ::set-output name=name::$NAME
           mkdir dist
-          npx vsce package -o ./dist/$NAME.vsix
+          npx vsce package -o $NAME.vsix
       - name: Upload Release Asset
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
@@ -42,14 +42,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./dist/${{ steps.set-version.outputs.name }}.vsix
+          asset_path: ${{ steps.set-version.outputs.name }}.vsix
           asset_name: ${{ steps.set-version.outputs.name }}.vsix
           asset_content_type: application/zip
       - name: Publish to VSCode Marketplace
         run: |
           [ -n "${{ secrets.VSCE_TOKEN }}" ] && \
-            npx vsce publish --packagePath ./dist/${{ steps.set-version.outputs.name }}.vsix -p ${{ secrets.VSCE_TOKEN }} || true
+            npx vsce publish --packagePath ${{ steps.set-version.outputs.name }}.vsix -p ${{ secrets.VSCE_TOKEN }} || true
       - name: Publish to Open VSX Registry
         run: |
           [ -n "${{ secrets.OVSX_TOKEN }}" ] && \
-            npx ovsx publish --packagePath ./dist/${{ steps.set-version.outputs.name }}.vsix --pat ${{ secrets.OVSX_TOKEN }} || true
+            npx ovsx publish --packagePath ${{ steps.set-version.outputs.name }}.vsix --pat ${{ secrets.OVSX_TOKEN }} || true
