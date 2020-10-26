@@ -1,24 +1,24 @@
 {
-    "name": "objectscript-pack",
-    "displayName": "InterSystems ObjectScript Extension Pack",
-    "description": "Extensions for ObjectScript development",
-    "version": "1.0.1-SNAPSHOT",
-    "publisher": "intersystems-community",
-    "icon": "logo.png",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/intersystems-community/vscode-objectscript-pack"
-      },
-      "license": "MIT",
-        "engines": {
-        "vscode": "^1.50.0"
-    },
-    "categories": [
-        "Extension Packs"
-    ],
-    "extensionPack": [ 
-        "intersystems-community.vscode-objectscript",
-        "intersystems-community.servermanager",
-        "intersystems.language-server"
-    ]
+  "name": "objectscript-pack",
+  "displayName": "InterSystems ObjectScript Extension Pack",
+  "description": "Extensions for ObjectScript development",
+  "version": "1.0.2-SNAPSHOT",
+  "publisher": "intersystems-community",
+  "icon": "logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intersystems-community/vscode-objectscript-pack"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "extensionPack": [
+    "intersystems-community.vscode-objectscript",
+    "intersystems-community.servermanager",
+    "intersystems.language-server"
+  ]
 }
