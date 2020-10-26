@@ -51,4 +51,4 @@ jobs:
       - name: Publish to Open VSX Registry
         run: |
           [ -n "${{ secrets.OVSX_TOKEN }}" ] && \
-            npx ovsx publish --packagePath ${{ steps.set-version.outputs.name }}.vsix --pat ${{ secrets.OVSX_TOKEN }} || true
+            npx ovsx publish ${{ steps.set-version.outputs.name }}.vsix --pat ${{ secrets.OVSX_TOKEN }} || true
