@@ -2,7 +2,7 @@
   "name": "objectscript-pack",
   "displayName": "InterSystems ObjectScript Extension Pack",
   "description": "Extensions for ObjectScript development",
-  "version": "1.0.2-SNAPSHOT",
+  "version": "1.0.3-SNAPSHOT",
   "publisher": "intersystems-community",
   "icon": "logo.png",
   "repository": {
